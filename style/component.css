@@ -1,0 +1,22 @@
+/* component */
+
+
+.btn-more{
+  display: inline-block;
+  font-size: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  color: var(--primary-color);
+  padding-block: 17px;
+  padding-inline: 117px;
+}
+
+.btn-read-more{
+  /* width: 134px; */
+  display: inline-block;
+  border: 1px solid var(--primary-color);
+  border-radius: 1000px;
+  color: var(--primary-color);
+  padding-block: 12px;
+  padding-inline: 26px;
+}
