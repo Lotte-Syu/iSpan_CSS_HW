@@ -1,17 +1,21 @@
-/* pages */
+:root{
+  --section-spacing: 100px;
+  --item-spacing: 40px;
+}
+
+/* header */
 .header-container .header-dropdown {
   font-size: 25px;
   color: black;
   display: none;
 }
-.banner{
-  height: 576px;
-}
 
+/* About APAC */
 .main-bg{
-  padding-block: 100px;
+  padding-block: var(--section-spacing);
   /* padding-inline: 320px; */
-  height: 788px;
+  /* height: 788px; */
+  border: 5px solid red;
 }
 .main-title,.annou-title{
   font-size: 64px;
@@ -39,66 +43,7 @@
     padding-bottom: 24px;
   }
 }
-
-.upcoming-bg{
-  width: 1200px;
-  height: 440px;
-  padding: 60px;
-  margin: 0 auto;
-  border-radius: 20px;
-  background: 
-  linear-gradient(to right, rgba(16, 56, 77, 0.8), rgba(16, 56, 77, 0.8)),
-  url(/images/view.jpg) center center / cover;
-  color: #ffff;
-}
-
-.upcoming-date-right{
-  color: var(--primary-color);
-  text-align: center;
-}
-.upcoming-date-left{
-  color: var(--primary-color);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.upcoming-flex{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.line-center{
-  border-right: 1px solid #ffff;
-}
-
-
-
-
-.annou-bg{
-  background: 
-  url(/images/cloud.png) right top no-repeat, 
-  linear-gradient(to bottom, #ffff, #E4F8FF, #E0F2FD);
-}
-
-.annou-content{
-  margin: 0 auto;
-  font-size: 18px;
-  padding-block: 24px;
-  padding-inline: 40px;
-  border-radius: 10px;
-  background-color: #ffff;
-  width: 1100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-
-/* RWD */
+/* About APAC header RWD */
 @media screen and (max-width:992px) {
   .header-container .header-menu {
     display: none !important;
@@ -113,45 +58,8 @@
     padding-block: 40px;
   }
 
-  .lg-reverse{
-    /* display: flex; 
-    flex-direction: column-reverse; */
-  }
-  .upcoming-bg{
-    width: 100%;
-    height: auto;
-    background: #fff;
-    color: black;
-  }
-  .upcoming-date-left,
-  .upcoming-date-right{
-    display: none;
-  }
- 
-  .annou-bg{
-    background: #fff;
-  }
-  .annou-content{
-    width: 100%;
-  }
+  
 }
-
-
-
-/* .upcoming-bg{
-  width: 1200px;
-  height: 440px;
-  padding: 60px;
-  margin: 0 auto;
-  background: 
-  linear-gradient(to right, rgba(16, 56, 77, 0.8), rgba(16, 56, 77, 0.8)),
-  url(./images/view.jpg) center center / cover;
-  color: #ffff;
-} */
-
-
-
-
 
 @media screen and (max-width:576px) {
   .logo-text .fs-2{
@@ -161,7 +69,7 @@
     height: 300px;
   }
   .main-bg{
-    padding-block: 40px;
+    padding-block: var(--item-spacing);
   }
   .main-title,
   .annou-title{
@@ -173,9 +81,6 @@
     height: 100%;
     margin-block: 40px;
   }
- 
-
-
 }
 
 @media screen and (max-width:378px) {
@@ -183,21 +88,138 @@
   .logo-text .fs-md-12{
     font-size: 12px !important;
   }
-  .banner{
-    height: 200px;
+  
+}
+
+
+/* upcoming course */
+.upcoming-bg{
+  padding-bottom: 100px;
+  /* border: 5px solid blue; */
+}
+.upcoming-wrap{
+  width: 1200px;
+  height: 440px;
+  padding: 60px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: 
+  linear-gradient(to right, rgba(16, 56, 77, 0.8), rgba(16, 56, 77, 0.8)),
+  url(/images/view.jpg) center center / cover;
+  color: #ffff;
+}
+.upcoming-date-right{
+  color: var(--primary-color);
+  text-align: center;
+}
+.upcoming-date-left{
+  color: var(--primary-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upcoming-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.line-center{
+  border-right: 1px solid #ffff;
+}
+
+/* upcoming course RWD */
+@media screen and (max-width:992px) {
+  .upcoming-bg{
+    padding-bottom: 0px;
+  }
+  .upcoming-wrap{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    color: black;
+    padding: 0px;
+    .card-md{
+      box-shadow: 5px 5px 10px #3333 ;
+      margin-bottom: 24px;
+      padding: 24px 15px;
+      h4{
+        color: var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+      }
+      p{
+        color: var(--secondary-color);
+      }
+    }
+  }
+  .upcoming-date-left,
+  .upcoming-date-right{
+    display: none;
+  }
+}
+
+
+/* announcement */
+.annou-bg{
+  background: 
+  url(/images/cloud.png) right -50px top no-repeat, 
+  linear-gradient(to bottom, #ffff, #E4F8FF, #E0F2FD);
+}
+.annou-content{
+  margin: 0 auto;
+  font-size: 18px;
+  padding-block: 24px;
+  padding-inline: var(--item-spacing);
+  border-radius: 10px;
+  background-color: #ffff;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-more-bg{
+  background:
+  url(/images/cloud.png) right top no-repeat,
+  #E0F2FD;
+  padding-top: 60px;
+}
+
+/* announcement RWD */
+@media screen and (max-width:992px)  {
+  .lg-reverse{
+    display: flex; 
+    flex-direction: column-reverse;
+  }
+  .annou-bg{
+    background: #fff;
+    /* border: 3px solid blue; */
+    .card-md{
+      box-shadow: 5px 5px 10px #3333 ;
+      margin-bottom: 24px;
+      padding: 24px 15px;
+      p{
+        color: var(--secondary-color);
+      }
+    }
   }
   .annou-title{
     font-size: 30px;
   }
   .annou-content{
+    width: 100%;
     text-align: center;
     width: 345px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-
+  
+ 
 }
+
+
+
 
 
