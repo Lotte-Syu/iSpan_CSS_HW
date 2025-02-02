@@ -4,3 +4,8 @@ fs-3: 1.75rem 相當於 28px
 fs-4: 1.5rem 相當於 24px
 fs-5: 1.25rem 相當於 20px
 fs-6: 1rem 相當於 16px
+
+
+紀錄作業卡點：
+main-bg 寫死高造成下方的upcoming跟announcement區塊 跟上方section重疊
+RWD 注意不要寫死高，可以下最外容器的border確認是不是由內容撐開高度 

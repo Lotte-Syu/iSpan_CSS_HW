@@ -3,6 +3,20 @@
   --item-spacing: 40px;
 }
 
+.title-style{
+  font-size: 64px;
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary-color);
+  margin-bottom: 60px;
+}
+@media screen and (max-width:992px) {
+  .title-style{
+    font-size: 30px;
+  }  
+}
+
+
+
 /* header */
 .header-container .header-dropdown {
   font-size: 25px;
@@ -13,23 +27,14 @@
 /* About APAC */
 .main-bg{
   padding-block: var(--section-spacing);
-  /* padding-inline: 320px; */
-  /* height: 788px; */
-  border: 5px solid red;
 }
-.main-title,.annou-title{
-  font-size: 64px;
-  font-weight: 700;
-  border-bottom: 3px solid var(--primary-color);
-  margin-bottom: 60px;
-}
+
 .main-text{
   font-size: 22px;
   letter-spacing: 2px;
   text-align: justify;
   margin-inline: 35px;
   width: 100%;
-  /* height: 315px; */
   margin-bottom: 55px;
 
 }
@@ -37,7 +42,6 @@
   background-color: #F6F7F9;
   border-radius: 20px;
   width: 240px;
-  /* height: 445px; */
   h3{
     color: #999999;
     padding-bottom: 24px;
@@ -65,15 +69,8 @@
   .logo-text .fs-2{
     font-size: 16px !important;
   }
-  .banner{
-    height: 300px;
-  }
   .main-bg{
     padding-block: var(--item-spacing);
-  }
-  .main-title,
-  .annou-title{
-    font-size: 30px;
   }
   .main-text{
     font-size: 18px;
@@ -160,7 +157,6 @@
   }
 }
 
-
 /* announcement */
 .annou-bg{
   background: 
@@ -181,9 +177,10 @@
 
 .btn-more-bg{
   background:
-  url(/images/cloud.png) right top no-repeat,
+  url(/images/cloud.png) right bottom -100px no-repeat,
   #E0F2FD;
   padding-top: 60px;
+  padding-bottom: 100px;
 }
 
 /* announcement RWD */
@@ -204,9 +201,6 @@
       }
     }
   }
-  .annou-title{
-    font-size: 30px;
-  }
   .annou-content{
     width: 100%;
     text-align: center;
@@ -215,11 +209,159 @@
     flex-direction: column;
     align-items: center;
   }
-  
- 
+  .btn-more-bg{
+    background: #fff;
+    padding-block: var(--item-spacing);
+
+  }
 }
 
+/* news */
+.news-bg{
+  background: 
+  url(/images/cloud.png) left -400px bottom -100px no-repeat,
+  linear-gradient(to top, #E4F8FF 20%, #E0F2FD);
+  padding-bottom: var(--section-spacing);
+  .card{
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 5px 5px 10px #3333;
+    img{
+      border-radius: 20px;
+    }
+    .card-title{
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+    p.card-text{
+      color: #333333;
+    }
+    p{
+      color: #999999;
+      span{
+        color: var(--primary-color);
+      }
+    } 
+  }
+}
 
+/* news RWD */
+@media screen and (max-width:992px) {
+  .news-bg{
+    background: white;
+  }
+  
+}
+/* footer-banner */
+.ratio-1920x580{
+  width: 100%;
+  aspect-ratio: 1920 / 580;
+}
+.ratio-1920x580 img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
 
+/* footer */
+.footer-bg{
+  background: var(--secondary-color);
+  padding-top: 60px;
+}
+.footer-info{
+  width: 55%;
+  ul{
+    padding-right: 80px;
+    margin-top: 16px;
+    li{
+      margin-bottom: 10px;
+    }
+  }
+}
+.footer-nav{
+  a{
+    color: #fff;
+    font-size: 18px;
+  }
+  width: 40%;
+}
+.copyright-bg{
+  background: var(--secondary-color);
+  padding-top: var(--item-spacing);
+  padding-bottom: 30px;
+  .copyright{
+    margin-top: var(--section-spacing);
+    div{
+      width: 40px;
+      height: 40px;
+      background-color: #5c3510;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        display: block;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* footer RWD */
+@media screen and (max-width:992px) {
+  .lg-layout{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .footer-info,
+    .footer-nav{
+      width: 100%;
+    }
+    .footer-nav{
+      border-top: 2px solid #ffff;
+      padding-top: 50px;
+    }
+    .footer-info{
+      .d-flex{
+        justify-content: center;
+      }
+      .img-lg-size{
+        width: 34px;
+        height: 34px;
+      }
+      ul{
+        padding-right: 0px;
+      }
+      .me-1{
+        display: none;
+      }
+      .fs-3{
+        font-size: 18px !important;
+      }
+      .fs-6{
+        font-size: 8.5px !important;
+      }
+    }
+    .info-lg-text{
+      text-align: center;
+      li{
+        margin-bottom: 20px;
+      }
+      .mb-block{
+        display: block;
+      }
+      .mb-d-none{
+        display: none;
+      }
+    }
+  }
+  .copyright-bg{
+    padding-top: 10px;
+  }
+}
 
 
